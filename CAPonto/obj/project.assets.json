@@ -12226,11 +12226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\leporto\\source\\repos\\CAPonto\\CAPonto\\CAPonto.csproj",
+      "projectUniqueName": "C:\\Users\\leporto\\source\\repos\\CAPonto\\CAPonto\\CAPonto.csproj",
       "projectName": "CAPonto",
-      "projectPath": "c:\\users\\leporto\\source\\repos\\CAPonto\\CAPonto\\CAPonto.csproj",
+      "projectPath": "C:\\Users\\leporto\\source\\repos\\CAPonto\\CAPonto\\CAPonto.csproj",
       "packagesPath": "C:\\Users\\leporto\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\leporto\\source\\repos\\CAPonto\\CAPonto\\obj\\",
+      "outputPath": "C:\\Users\\leporto\\source\\repos\\CAPonto\\CAPonto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

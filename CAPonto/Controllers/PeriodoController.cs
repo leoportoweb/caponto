@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CAPonto.Filters;
 using CAPonto.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace CAPonto.Controllers
 {
+    [SecurityFilter(Order = 1, Adm = true)]
     public class PeriodoController : Controller
     {
         private IHostingEnvironment _hostingEnvironment;

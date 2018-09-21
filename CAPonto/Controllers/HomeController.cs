@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CAPonto.Models;
+using CAPonto.Util;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
@@ -50,11 +51,11 @@ namespace CAPonto.Controllers
 
             if (colaborador != null)
             {
-                HttpContext.Session.SetString("_MATRICULA", colaborador.Matricula);
-                HttpContext.Session.SetString("_NOME", colaborador.Nome);
-                HttpContext.Session.SetString("_ADMINISTRADOR", colaborador.Administrador.ToString());
-                HttpContext.Session.SetString("_MINUTOS_DIA", "540");
-                HttpContext.Session.SetString("_LIMITE_DIA", "10");
+                HttpContext.Session.SetString("GLOBAL_MATRICULA", colaborador.Matricula);
+                HttpContext.Session.SetString("GLOBAL_NOME", colaborador.Nome);
+                HttpContext.Session.SetString("GLOBAL_ADMINISTRADOR", colaborador.Administrador.ToString());
+                HttpContext.Session.SetString("GLOBAL_MINUTOS_DIA", "540");
+                HttpContext.Session.SetString("GLOBAL_LIMITE_DIA", "10");
 
                 Config config = new Config();
 
@@ -67,11 +68,13 @@ namespace CAPonto.Controllers
 
                     if (config != null)
                     {
-                        HttpContext.Session.SetString("_MINUTOS_DIA", (config.HorasDia * 60).ToString());
-                        HttpContext.Session.SetString("_LIMITE_DIA", config.LimiteAjuste.ToString());
+                        HttpContext.Session.SetString("GLOBAL_MINUTOS_DIA", (config.HorasDia * 60).ToString());
+                        HttpContext.Session.SetString("GLOBAL_LIMITE_DIA", config.LimiteAjuste.ToString());
                     }
                 }
 
+                Utilitaria.CarregaCookie(Response, HttpContext.Session);
+                
                 return RedirectToAction(nameof(Index), "Consolidado");
             }
 
@@ -99,9 +102,11 @@ namespace CAPonto.Controllers
 
         public IActionResult Logout()
         {
-            HttpContext.Session.SetString("_MATRICULA", string.Empty);
-            HttpContext.Session.SetString("_NOME", string.Empty);
-            HttpContext.Session.SetString("_ADMINISTRADOR", string.Empty);
+            HttpContext.Session.SetString("GLOBAL_MATRICULA", string.Empty);
+            HttpContext.Session.SetString("GLOBAL_NOME", string.Empty);
+            HttpContext.Session.SetString("GLOBAL_ADMINISTRADOR", string.Empty);
+
+            Utilitaria.ApagaCookie(Response, Request);
 
             return RedirectToAction(nameof(Index));
         }

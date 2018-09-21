@@ -51,7 +51,7 @@ namespace CAPonto.Controllers
                 lancamentosDia = new List<LancamentoDia>();
 
                 var _path = _pathBase + "lancamentoDia-" +
-                            HttpContext.Session.GetString("_MATRICULA") + "-" +
+                            HttpContext.Session.GetString("GLOBAL_MATRICULA") + "-" +
                             ano.ToString() + "-" +
                             mes.ToString() + ".json";
 
@@ -94,7 +94,7 @@ namespace CAPonto.Controllers
 
                     consolidacao.Add(new Consolidado()
                     {
-                        Matricula = HttpContext.Session.GetString("_MATRICULA"),
+                        Matricula = HttpContext.Session.GetString("GLOBAL_MATRICULA"),
                         Ano = ano ?? DateTime.Now.Year,
                         Mes = mes,
                         MesDescricao = new CultureInfo("en-US").DateTimeFormat.GetMonthName(mes),
@@ -112,7 +112,7 @@ namespace CAPonto.Controllers
                 {
                     consolidacao.Add(new Consolidado()
                     {
-                        Matricula = HttpContext.Session.GetString("_MATRICULA"),
+                        Matricula = HttpContext.Session.GetString("GLOBAL_MATRICULA"),
                         Ano = ano ?? DateTime.Now.Year,
                         Mes = mes,
                         MesDescricao = new CultureInfo("en-US").DateTimeFormat.GetMonthName(mes)

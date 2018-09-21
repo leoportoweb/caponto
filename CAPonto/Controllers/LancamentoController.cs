@@ -92,7 +92,7 @@ namespace CAPonto.Controllers
 
                                 lancamentosDia.Add(new LancamentoDia()
                                 {
-                                    Matricula = HttpContext.Session.GetString("_MATRICULA"),
+                                    Matricula = HttpContext.Session.GetString("GLOBAL_MATRICULA"),
                                     Data = Convert.ToDateTime(dataAtual),
                                     DiaSemana = Convert.ToDateTime(dataAtual).DayOfWeek.ToString(),
                                     DiaSemanaReduzido = Convert.ToDateTime(dataAtual).ToString("ddd", new CultureInfo("en-US")),
@@ -121,7 +121,7 @@ namespace CAPonto.Controllers
 
                     lancamentosDia.Add(new LancamentoDia()
                     {
-                        Matricula = HttpContext.Session.GetString("_MATRICULA"),
+                        Matricula = HttpContext.Session.GetString("GLOBAL_MATRICULA"),
                         Data = Convert.ToDateTime(data),
                         DiaSemana = Convert.ToDateTime(data).DayOfWeek.ToString(),
                         DiaSemanaReduzido = Convert.ToDateTime(data).ToString("ddd", new CultureInfo("en-US")),
@@ -145,7 +145,7 @@ namespace CAPonto.Controllers
         {
             if (arquivo != null && arquivo.Length > 0)
             {
-                var _path = _pathBaseUpload + arquivo.FileName;
+                var _path = _pathBaseUpload + HttpContext.Session.GetString("GLOBAL_MATRICULA") + ".csv"; //arquivo.FileName;
 
                 using (var stream = new FileStream(_path, FileMode.Create))
                 {
@@ -163,7 +163,7 @@ namespace CAPonto.Controllers
                         {
                             var matricula = line.Split("Matrícula:;")[1].Replace(";", "");
 
-                            if (matricula.Equals(HttpContext.Session.GetString("_MATRICULA")))
+                            if (matricula.Equals(HttpContext.Session.GetString("GLOBAL_MATRICULA")))
                                 ehProprietario = true;
                         }
 
@@ -193,7 +193,7 @@ namespace CAPonto.Controllers
                                 if (periodo != null)
                                 {
                                     _path = _pathBase + "lancamentoDia-" +
-                                                HttpContext.Session.GetString("_MATRICULA") + "-" +
+                                                HttpContext.Session.GetString("GLOBAL_MATRICULA") + "-" +
                                                 periodo.Ano.ToString() + "-" +
                                                 periodo.Mes.ToString() + ".json";
 
@@ -251,7 +251,7 @@ namespace CAPonto.Controllers
                                     //cadastrar lançamentos do dia
                                     lancamentosDia.Add(new LancamentoDia()
                                     {
-                                        Matricula = HttpContext.Session.GetString("_MATRICULA"),
+                                        Matricula = HttpContext.Session.GetString("GLOBAL_MATRICULA"),
                                         Data = Convert.ToDateTime(data),
                                         DiaSemana = Convert.ToDateTime(data).DayOfWeek.ToString(),
                                         DiaSemanaReduzido = Convert.ToDateTime(data).ToString("ddd", new CultureInfo("en-US")),
@@ -276,7 +276,7 @@ namespace CAPonto.Controllers
             try
             {
                 var _path = _pathBase + "lancamentoDia-" +
-                            HttpContext.Session.GetString("_MATRICULA") + "-" +
+                            HttpContext.Session.GetString("GLOBAL_MATRICULA") + "-" +
                             collection["RECORD_ANO"].ToString() + "-" +
                             collection["RECORD_MES"].ToString() + ".json";
 
@@ -318,7 +318,7 @@ namespace CAPonto.Controllers
                 ViewBag.Pares = 3;
 
                 var _path = _pathBase + "lancamentoDia-" +
-                            HttpContext.Session.GetString("_MATRICULA") + "-" +
+                            HttpContext.Session.GetString("GLOBAL_MATRICULA") + "-" +
                             periodo.Ano.ToString() + "-" +
                             periodo.Mes.ToString() + ".json";
 
@@ -351,7 +351,7 @@ namespace CAPonto.Controllers
                             DiaSemana = dataInicio.DayOfWeek.ToString(),
                             DiaSemanaReduzido = dataInicio.ToString("ddd", new CultureInfo("en-US")),
                             EhFeriado = false,
-                            Matricula = HttpContext.Session.GetString("_MATRICULA"),
+                            Matricula = HttpContext.Session.GetString("GLOBAL_MATRICULA"),
                             Lancamentos = lancamentos
                         });
                     }
@@ -367,8 +367,8 @@ namespace CAPonto.Controllers
             {
                 double total = 0;
                 double diferenca = 0;
-                double minutosDia = Convert.ToDouble(HttpContext.Session.GetString("_MINUTOS_DIA"));
-                double limiteDia = Convert.ToDouble(HttpContext.Session.GetString("_LIMITE_DIA"));
+                double minutosDia = Convert.ToDouble(HttpContext.Session.GetString("GLOBAL_MINUTOS_DIA"));
+                double limiteDia = Convert.ToDouble(HttpContext.Session.GetString("GLOBAL_LIMITE_DIA"));
 
                 dia.DiaSemana = dia.Data.DayOfWeek.ToString();
                 dia.DiaSemanaReduzido = dia.Data.ToString("ddd", new CultureInfo("en-US"));
@@ -408,7 +408,7 @@ namespace CAPonto.Controllers
             }
 
             var _pathDia = _pathBase + "lancamentoDia-" +
-                        HttpContext.Session.GetString("_MATRICULA") + "-" +
+                        HttpContext.Session.GetString("GLOBAL_MATRICULA") + "-" +
                         ano + "-" +
                         mes + ".json";
 

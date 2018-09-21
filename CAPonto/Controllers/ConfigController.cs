@@ -1,18 +1,16 @@
-﻿using System;
-using System.Web;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CAPonto.Filters;
 using CAPonto.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.FileProviders;
+using System;
+using System.IO;
 
 namespace CAPonto.Controllers
 {
+    //[SessionFilter(Order = 1)]
+    [SecurityFilter(Order = 1, Adm = true)]
     public class ConfigController : Controller
     {
         private IHostingEnvironment _hostingEnvironment;

@@ -3,5 +3,10 @@
     "Matricula": "95537171520",
     "Nome": "Leonardo Joel Barreto Porto",
     "Administrador": true
+  },
+  {
+    "Matricula": "1",
+    "Nome": "Colab Tester",
+    "Administrador": false
   }
 ]
