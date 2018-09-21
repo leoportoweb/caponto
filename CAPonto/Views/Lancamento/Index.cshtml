@@ -1,0 +1,271 @@
+﻿@using System.Security.AccessControl
+@model IEnumerable<CAPonto.Models.LancamentoDia>
+
+@{
+    ViewData["Title"] = "Records";
+}
+
+<h2>Records</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<br />
+<label class="text-smaller">Select a period:</label>
+<br />
+<form asp-action="Index">
+    <div class="form-inline">
+        <div class="form-group mb-2">
+            <label>Month:</label>&nbsp;
+            <input id="mes" name="mes" type="number" class="form-control" placeholder="Month" value="@ViewBag.Mes">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label>Year:</label>&nbsp;
+            <input id="ano" name="ano" type="number" class="form-control" placeholder="Year" value="@ViewBag.Ano">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <button type="submit" class="btn btn-default">Search</button>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <button type="button" class="btn btn-dark" onclick="ShowImport();">Import File</button>
+        </div>
+    </div>
+</form>
+<script>
+    function ShowImport() {
+        if (!$("#divImport").is(':visible')) {
+            $("#divImport").slideDown(500);
+        } else {
+            $("#divImport").slideUp(500);
+        }
+    }
+</script>
+<form asp-action="Import" enctype="multipart/form-data">
+    <div id="divImport" class="form-inline" style="display: none; padding-top: 20px;">
+        <div class="form-group mb-2">
+            <label>Select a file to import:</label>&nbsp;
+            <input id="arquivo" name="arquivo" type="file" class="form-control-file" placeholder="File">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <button type="submit" class="btn btn-primary">Import</button>
+        </div>
+    </div>
+</form>
+<br />
+<br />
+<form asp-action="Edit">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    H
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    W
+                </th>
+                @for (int p = 0; p < ViewBag.Pares; p++)
+                {
+                    <th>
+                        In
+                        @(p + 1)
+                    </th>
+                    <th>
+                        Out
+                        @(p + 1)
+                    </th>
+                }
+                <th>
+                    Diff
+                </th>
+                <th>
+                    Diff*
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var data = "dd/MM/yyyy";
+                int sulfix = -2;
+                var totalMinutosExtra = 0.0;
+                var totalMinutosDev = 0.0;
+                var totalMinutosExtraAjustado = 0.0;
+                var totalMinutosDevAjustado = 0.0;
+                foreach (var dia in Model)
+                {
+                    totalMinutosExtra = totalMinutosExtra + dia.Extra;
+                    totalMinutosDev = totalMinutosDev + dia.Devendo;
+                    totalMinutosExtraAjustado = totalMinutosExtraAjustado + dia.ExtraAjustado;
+                    totalMinutosDevAjustado = totalMinutosDevAjustado + dia.DevendoAjustado;
+                    data = Convert.ToDateTime(dia.Data).ToString("dd/MM/yyyy");
+                    if (dia.DiaSemanaReduzido.Equals("Sat") || dia.DiaSemanaReduzido.Equals("Sun"))
+                    {
+                        @Html.Raw("<tr style='background-color: whitesmoke;'>")
+                    }
+                    else
+                    {
+                        if (dia.EhFeriado)
+                        {
+                            @Html.Raw("<tr style='background-color: #E3F8E8;'>")
+                        }
+                        else
+                        {
+                            @Html.Raw("<tr>")
+                        }
+                    }
+                    if (!dia.DiaSemanaReduzido.Equals("Sat") && !dia.DiaSemanaReduzido.Equals("Sun"))
+                    {
+                    <td>
+                        <input type="checkbox" id="RECORD_FERIADO_@data" name="RECORD_FERIADO_@data" checked="@dia.EhFeriado" />
+                    </td>
+                }
+                else
+                {
+                    <td></td>
+                }
+                <td>
+                    @Html.Raw(data)
+                </td>
+                <td>
+                    @Html.Raw(dia.DiaSemanaReduzido)
+                </td>
+                for (int i = 0; i < dia.Lancamentos.Count(); i = i + 2)
+                {
+                    var e1 = Convert.ToDateTime(dia.Lancamentos[i].Data).ToString("HH:mm");
+                    var e2 = Convert.ToDateTime(dia.Lancamentos[i + 1].Data).ToString("HH:mm");
+                    if (e1.Equals("00:00"))
+                    {
+                        e1 = "";
+                    }
+                    if (e2.Equals("00:00"))
+                    {
+                        e2 = "";
+                    }
+                    sulfix = sulfix + 2;
+                    <td>
+                        <input type="hidden" id="RECORD_DATA_@sulfix" name="RECORD_DATA_@sulfix" value="@data" />
+                        <input type="time" id="RECORD_@sulfix" name="RECORD_@sulfix" value="@e1" style="width: 80px" />
+                    </td>
+                    <td>
+                        <input type="hidden" id="RECORD_DATA_@(sulfix + 1)" name="RECORD_DATA_@(sulfix + 1)" value="@data" />
+                        <input type="time" id="RECORD_@(sulfix + 1)" name="RECORD_@(sulfix + 1)" value="@e2" style="width: 80px" />
+                    </td>
+                }
+                <td>
+                    @{
+                        var minutos = dia.Extra;
+                        int horas = (int)(dia.Extra / 60);
+                        minutos = minutos - (horas * 60);
+
+                        var minutosDev = dia.Devendo;
+                        int horasDev = (int)(dia.Devendo / 60);
+                        minutosDev = minutosDev - (horasDev * 60);
+
+                        if (dia.Extra > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(horas.ToString().PadLeft(2, '0') + ":" + minutos.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                        else if (dia.Devendo > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(horasDev.ToString().PadLeft(2, '0') + ":" + minutosDev.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        var minutosAjustado = dia.ExtraAjustado;
+                        int horasAjustado = (int)(dia.ExtraAjustado / 60);
+                        minutosAjustado = minutosAjustado - (horasAjustado * 60);
+
+                        var minutosDevAjustado = dia.DevendoAjustado;
+                        int horasDevAjustado = (int)(dia.DevendoAjustado / 60);
+                        minutosDevAjustado = minutosDevAjustado - (horasDevAjustado * 60);
+
+                        if (dia.ExtraAjustado > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(horasAjustado.ToString().PadLeft(2, '0') + ":" + minutosAjustado.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                        else if (dia.DevendoAjustado > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(horasDevAjustado.ToString().PadLeft(2, '0') + ":" + minutosDevAjustado.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                    }
+                </td>
+                @Html.Raw("</tr>")
+            }
+            @Html.Raw("<tfooter><tr>")
+            <td></td>
+            <td></td>
+            <td></td>
+            for (int p = 0; p < ViewBag.Pares; p++)
+            {
+                <td></td>
+                <td></td>
+            }
+            <td>
+                @{
+                    if (totalMinutosExtra > totalMinutosDev)
+                    {
+                        totalMinutosExtra = totalMinutosExtra - totalMinutosDev;
+                        var minutosTotal = totalMinutosExtra;
+                        int horasTotal = (int)(totalMinutosExtra / 60);
+                        minutosTotal = minutosTotal - (horasTotal * 60);
+                        <span class="text-success font-weight-bold">
+                            @Html.Raw(horasTotal.ToString().PadLeft(2, '0') + ":" + minutosTotal.ToString().PadLeft(2, '0'))
+                        </span>
+                    }
+                    else if (totalMinutosDev > totalMinutosExtra)
+                    {
+                        totalMinutosDev = totalMinutosDev - totalMinutosExtra;
+                        var minutosDevTotal = totalMinutosDev;
+                        int horasDevTotal = (int)(totalMinutosDev / 60);
+                        minutosDevTotal = minutosDevTotal - (horasDevTotal * 60);
+                        <span class="text-danger font-weight-bold">
+                            @Html.Raw(horasDevTotal.ToString().PadLeft(2, '0') + ":" + minutosDevTotal.ToString().PadLeft(2, '0'))
+                        </span>
+                    }
+                }
+            </td>
+            <td>
+                @{
+                    if (totalMinutosExtraAjustado > totalMinutosDevAjustado)
+                    {
+                        totalMinutosExtraAjustado = totalMinutosExtraAjustado - totalMinutosDevAjustado;
+                        var minutosTotal = totalMinutosExtraAjustado;
+                        int horasTotal = (int)(totalMinutosExtraAjustado / 60);
+                        minutosTotal = minutosTotal - (horasTotal * 60);
+                        <span class="text-success font-weight-bold">
+                            @Html.Raw(horasTotal.ToString().PadLeft(2, '0') + ":" + minutosTotal.ToString().PadLeft(2, '0'))
+                        </span>
+                    }
+                    else if (totalMinutosDevAjustado > totalMinutosExtraAjustado)
+                    {
+                        totalMinutosDevAjustado = totalMinutosDevAjustado - totalMinutosExtraAjustado;
+                        var minutosDevTotal = totalMinutosDevAjustado;
+                        int horasDevTotal = (int)(totalMinutosDevAjustado / 60);
+                        minutosDevTotal = minutosDevTotal - (horasDevTotal * 60);
+                        <span class="text-danger font-weight-bold">
+                            @Html.Raw(horasDevTotal.ToString().PadLeft(2, '0') + ":" + minutosDevTotal.ToString().PadLeft(2, '0'))
+                        </span>
+                    }
+                }
+            </td>
+            @Html.Raw("</tr></tfooter>")
+            }
+            </tbody>
+        </table>
+        <input type="hidden" id="RECORD_ANO" name="RECORD_ANO" value="@ViewBag.Ano" />
+        <input type="hidden" id="RECORD_MES" name="RECORD_MES" value="@ViewBag.Mes" />
+        <button type="submit" name="submitButton" value="Edit" class="btn btn-primary">Save</button>
+        <button type="submit" name="submitButton" value="Delete" class="btn btn-danger">Delete All</button>
+    </form>

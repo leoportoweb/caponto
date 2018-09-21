@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutLogin";
+}
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style="background-color: #EEEEEE; padding: 40px 40px 40px 40px; border: solid 1px white;">
+        <center>
+            <h1>CAPonto</h1>
+            <h3>Login to your account</h3>
+            <br />
+            <form asp-action="Index">
+                <input type="text" id="matricula" name="matricula" class="form-control" placeholder="Registration" /><br />
+                <button class="btn btn-primary" type="submit" style="width: 100%">Login</button>
+                <br /><br /><br />
+                <img src="images/logo_cap.png" alt="Capgemini" style="max-width: 200px;" />
+                <br />
+            </form>
+        </center>
+    </div>
+    <div class="col-md-3"></div>
+</div>

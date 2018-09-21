@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CAPonto.Models.Periodo>
+
+@{
+    ViewData["Title"] = "Period";
+}
+
+<h2>Periods</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<br/>
+<label class="text-smaller">Select a year:</label>
+<br />
+@foreach (var ano in ViewBag.Anos)
+{
+<input type="button" value="@ano" class="btn btn-default" onclick="location.href = '@Url.Action("Index","Periodo", new { ano = ano })';" />
+}
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFim)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ano)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataInicio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataFim)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { ano = item.Ano, mes = item.Mes }) |
+                    @Html.ActionLink("Details", "Details", new { ano = item.Ano, mes = item.Mes }) |
+                    @Html.ActionLink("Delete", "Delete", new { ano = item.Ano, mes = item.Mes })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

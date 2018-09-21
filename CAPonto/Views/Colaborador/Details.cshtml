@@ -1,0 +1,36 @@
+﻿@model CAPonto.Models.Colaborador
+
+@{
+    ViewData["Title"] = "Collaborator";
+}
+
+<h2>Collaborator</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Administrador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Administrador)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { matricula = Model.Matricula }) |
+    <a asp-action="Index">Back to List</a>
+</div>

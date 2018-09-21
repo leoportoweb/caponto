@@ -1,0 +1,34 @@
+﻿@model CAPonto.Models.Config
+
+@{
+    ViewData["Title"] = "Config";
+}
+
+<h2>Config</h2>
+
+<h4>Informations</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HorasDia" class="control-label"></label>
+                <input asp-for="HorasDia" class="form-control" />
+                <span asp-validation-for="HorasDia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LimiteAjuste" class="control-label"></label>
+                <input asp-for="LimiteAjuste" class="form-control" />
+                <span asp-validation-for="LimiteAjuste" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

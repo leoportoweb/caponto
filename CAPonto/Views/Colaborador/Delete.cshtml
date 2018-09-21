@@ -1,0 +1,39 @@
+﻿@model CAPonto.Models.Colaborador
+
+@{
+    ViewData["Title"] = "Collaborator";
+}
+
+<h2>Collaborator</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Delete</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Administrador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Administrador)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input asp-for="Matricula" class="form-control" type="hidden" />
+        <input type="submit" value="Delete" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+﻿@model CAPonto.Models.Colaborador
+
+@{
+    ViewData["Title"] = "Collaborator";
+}
+
+<h2>Collaborator</h2>
+
+<h4>Edit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Matricula" class="control-label"></label>
+                <span style="font-weight: bold;">
+                    @Html.DisplayFor(model => Model.Matricula)
+                </span>
+                <input asp-for="Matricula" class="form-control" type="hidden" />
+                <span asp-validation-for="Matricula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Administrador" /> @Html.DisplayNameFor(model => model.Administrador)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

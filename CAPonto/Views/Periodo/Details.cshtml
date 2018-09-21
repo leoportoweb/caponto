@@ -1,0 +1,42 @@
+﻿@model CAPonto.Models.Periodo
+
+@{
+    ViewData["Title"] = "Period";
+}
+
+<h2>Period</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { ano=Model.Ano, mes=Model.Mes }) |
+    <a asp-action="Index">Back to List</a>
+</div>

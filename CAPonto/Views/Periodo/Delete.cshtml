@@ -1,0 +1,46 @@
+﻿@model CAPonto.Models.Periodo
+
+@{
+    ViewData["Title"] = "Period";
+}
+
+<h2>Period</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Delete</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataFim)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input asp-for="Ano" class="form-control" type="hidden" />
+        <input asp-for="Mes" class="form-control" type="hidden" />
+        <input type="submit" value="Delete" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

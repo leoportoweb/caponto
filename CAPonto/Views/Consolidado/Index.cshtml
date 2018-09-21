@@ -1,0 +1,217 @@
+﻿@model IEnumerable<CAPonto.Models.Consolidado>
+
+@{
+    ViewData["Title"] = "Historic";
+}
+
+<h2>Historic</h2>
+
+<label class="text-smaller">Select a year:</label>
+<br />
+@foreach (var ano in ViewBag.Anos)
+{
+    <input type="button" value="@ano" class="btn btn-default" onclick="location.href = '@Url.Action("Index","Consolidado", new { ano = ano })';" />
+}
+<br />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Year
+            </th>
+            <th>
+                Month
+            </th>
+            <th style="width: 12%">
+                Diff
+            </th>
+            <th style="width: 12%">
+                Diff*
+            </th>
+            <th style="width: 12%">
+                Diff Num
+            </th>
+            <th style="width: 12%">
+                Diff Num*
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ano)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MesDescricao)
+                </td>
+                <td>
+                    @{
+                        var minutos = item.Extra;
+                        int horas = (int)(item.Extra / 60);
+                        minutos = minutos - (horas * 60);
+
+                        var minutosDev = item.Devendo;
+                        int horasDev = (int)(item.Devendo / 60);
+                        minutosDev = minutosDev - (horasDev * 60);
+
+                        if (item.Extra > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(horas.ToString().PadLeft(2, '0') + ":" + minutos.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                        else if (item.Devendo > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(horasDev.ToString().PadLeft(2, '0') + ":" + minutosDev.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        var minutosAjustado = item.ExtraAjustado;
+                        int horasAjustado = (int)(item.ExtraAjustado / 60);
+                        minutosAjustado = minutosAjustado - (horasAjustado * 60);
+
+                        var minutosDevAjustado = item.DevendoAjustado;
+                        int horasDevAjustado = (int)(item.DevendoAjustado / 60);
+                        minutosDevAjustado = minutosDevAjustado - (horasDevAjustado * 60);
+
+                        if (item.ExtraAjustado > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(horasAjustado.ToString().PadLeft(2, '0') + ":" + minutosAjustado.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                        else if (item.DevendoAjustado > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(horasDevAjustado.ToString().PadLeft(2, '0') + ":" + minutosDevAjustado.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        if (item.ExtraDecimal > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(String.Format("{0:0.00}", item.ExtraDecimal))
+                            </span>
+                        }
+                        else if (item.DevendoDecimal > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(String.Format("{0:0.00}", item.DevendoDecimal))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        if (item.ExtraAjustadoDecimal > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(String.Format("{0:0.00}", item.ExtraAjustadoDecimal))
+                            </span>
+                        }
+                        else if (item.DevendoAjustadoDecimal > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(String.Format("{0:0.00}", item.DevendoAjustadoDecimal))
+                            </span>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    @{
+                        var minutosDiff = ViewBag.DiffExtra;
+                        int horasDiff = (int)(ViewBag.DiffExtra / 60);
+                        minutosDiff = minutosDiff - (horasDiff * 60);
+
+                        var minutosDevDiff = ViewBag.DiffDevendo;
+                        int horasDevDiff = (int)(ViewBag.DiffDevendo / 60);
+                        minutosDevDiff = minutosDevDiff - (horasDevDiff * 60);
+
+                        if (ViewBag.DiffExtra > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(horasDiff.ToString().PadLeft(2, '0') + ":" + minutosDiff.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                        else if (ViewBag.DiffDevendo > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(horasDevDiff.ToString().PadLeft(2, '0') + ":" + minutosDevDiff.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        var minutosAjustadoDiff = ViewBag.DiffExtraAjustado;
+                        int horasAjustadoDiff = (int)(ViewBag.DiffExtraAjustado / 60);
+                        minutosAjustadoDiff = minutosAjustadoDiff - (horasAjustadoDiff * 60);
+
+                        var minutosDevAjustadoDiff = ViewBag.DiffDevendoAjustado;
+                        int horasDevAjustadoDiff = (int)(ViewBag.DiffDevendoAjustado / 60);
+                        minutosDevAjustadoDiff = minutosDevAjustadoDiff - (horasDevAjustadoDiff * 60);
+
+                        if (ViewBag.DiffExtraAjustado > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(horasAjustadoDiff.ToString().PadLeft(2, '0') + ":" + minutosAjustadoDiff.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                        else if (ViewBag.DiffDevendoAjustado > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(horasDevAjustadoDiff.ToString().PadLeft(2, '0') + ":" + minutosDevAjustadoDiff.ToString().PadLeft(2, '0'))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        if (ViewBag.DiffExtraDecimal > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(String.Format("{0:0.00}", ViewBag.DiffExtraDecimal))
+                            </span>
+                        }
+                        else if (ViewBag.DiffDevendoDecimal > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(String.Format("{0:0.00}", ViewBag.DiffDevendoDecimal))
+                            </span>
+                        }
+                    }
+                </td>
+                <td>
+                    @{
+                        if (ViewBag.DiffExtraAjustadoDecimal > 0)
+                        {
+                            <span class="text-success">
+                                @Html.Raw(String.Format("{0:0.00}", ViewBag.DiffExtraAjustadoDecimal))
+                            </span>
+                        }
+                        else if (ViewBag.DiffDevendoAjustadoDecimal > 0)
+                        {
+                            <span class="text-danger">
+                                @Html.Raw(String.Format("{0:0.00}", ViewBag.DiffDevendoAjustadoDecimal))
+                            </span>
+                        }
+                    }
+                </td>
+            </tr>
+    </tbody>
+</table>
