@@ -44,3 +44,4 @@ c:\users\leporto\source\repos\CAPonto\CAPonto\obj\Debug\netcoreapp2.1\Razor\View
 c:\users\leporto\source\repos\CAPonto\CAPonto\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LayoutLogin.g.cshtml.cs
 c:\users\leporto\source\repos\CAPonto\CAPonto\obj\Debug\netcoreapp2.1\Razor\Views\Lancamento\Index.g.cshtml.cs
 c:\users\leporto\source\repos\CAPonto\CAPonto\obj\Debug\netcoreapp2.1\Razor\Views\Consolidado\Index.g.cshtml.cs
+C:\Users\leporto\source\repos\CAPonto\CAPonto\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_MensagensPartial.g.cshtml.cs

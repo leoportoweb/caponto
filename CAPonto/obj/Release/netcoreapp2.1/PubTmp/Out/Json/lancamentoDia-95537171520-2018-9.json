@@ -1,0 +1,1104 @@
+[
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-16T00:00:00",
+    "DiaSemana": "Thursday",
+    "DiaSemanaReduzido": "Thu",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-16T08:36:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-16T17:50:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-16T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-16T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-16T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-16T00:00:00"
+      }
+    ],
+    "Total": 554.0,
+    "Extra": 14.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 14.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-17T00:00:00",
+    "DiaSemana": "Friday",
+    "DiaSemanaReduzido": "Fri",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-17T08:23:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-17T17:50:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-17T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-17T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-17T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-17T00:00:00"
+      }
+    ],
+    "Total": 567.0,
+    "Extra": 27.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 27.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-18T00:00:00",
+    "DiaSemana": "Saturday",
+    "DiaSemanaReduzido": "Sat",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-18T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-18T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-18T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-18T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-18T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-18T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-19T00:00:00",
+    "DiaSemana": "Sunday",
+    "DiaSemanaReduzido": "Sun",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-19T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-19T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-19T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-19T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-19T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-19T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-20T00:00:00",
+    "DiaSemana": "Monday",
+    "DiaSemanaReduzido": "Mon",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-20T08:42:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-20T18:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-20T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-20T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-20T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-20T00:00:00"
+      }
+    ],
+    "Total": 558.0,
+    "Extra": 18.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 18.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-21T00:00:00",
+    "DiaSemana": "Tuesday",
+    "DiaSemanaReduzido": "Tue",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-21T09:02:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-21T17:33:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-21T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-21T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-21T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-21T00:00:00"
+      }
+    ],
+    "Total": 511.0,
+    "Extra": 0.0,
+    "Devendo": 29.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 29.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-22T00:00:00",
+    "DiaSemana": "Wednesday",
+    "DiaSemanaReduzido": "Wed",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-22T08:25:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-22T17:57:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-22T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-22T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-22T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-22T00:00:00"
+      }
+    ],
+    "Total": 572.0,
+    "Extra": 32.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 32.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-23T00:00:00",
+    "DiaSemana": "Thursday",
+    "DiaSemanaReduzido": "Thu",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-23T08:33:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-23T16:15:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-23T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-23T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-23T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-23T00:00:00"
+      }
+    ],
+    "Total": 462.0,
+    "Extra": 0.0,
+    "Devendo": 78.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 78.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-24T00:00:00",
+    "DiaSemana": "Friday",
+    "DiaSemanaReduzido": "Fri",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-24T08:36:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-24T17:30:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-24T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-24T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-24T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-24T00:00:00"
+      }
+    ],
+    "Total": 534.0,
+    "Extra": 0.0,
+    "Devendo": 6.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-25T00:00:00",
+    "DiaSemana": "Saturday",
+    "DiaSemanaReduzido": "Sat",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-25T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-25T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-25T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-25T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-25T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-25T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-26T00:00:00",
+    "DiaSemana": "Sunday",
+    "DiaSemanaReduzido": "Sun",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-26T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-26T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-26T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-26T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-26T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-26T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-27T00:00:00",
+    "DiaSemana": "Monday",
+    "DiaSemanaReduzido": "Mon",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-27T09:45:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-27T17:30:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-27T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-27T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-27T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-27T00:00:00"
+      }
+    ],
+    "Total": 465.0,
+    "Extra": 0.0,
+    "Devendo": 75.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 75.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-28T00:00:00",
+    "DiaSemana": "Tuesday",
+    "DiaSemanaReduzido": "Tue",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-28T08:08:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-28T16:28:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-28T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-28T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-28T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-28T00:00:00"
+      }
+    ],
+    "Total": 500.0,
+    "Extra": 0.0,
+    "Devendo": 40.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 40.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-29T00:00:00",
+    "DiaSemana": "Wednesday",
+    "DiaSemanaReduzido": "Wed",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-29T08:34:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-29T17:34:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-29T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-29T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-29T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-29T00:00:00"
+      }
+    ],
+    "Total": 540.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-30T00:00:00",
+    "DiaSemana": "Thursday",
+    "DiaSemanaReduzido": "Thu",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-30T08:25:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-30T17:43:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-30T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-30T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-30T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-30T00:00:00"
+      }
+    ],
+    "Total": 558.0,
+    "Extra": 18.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 18.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-08-31T00:00:00",
+    "DiaSemana": "Friday",
+    "DiaSemanaReduzido": "Fri",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-08-31T08:27:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-08-31T17:47:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-08-31T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-08-31T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-08-31T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-08-31T00:00:00"
+      }
+    ],
+    "Total": 560.0,
+    "Extra": 20.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 20.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-01T00:00:00",
+    "DiaSemana": "Saturday",
+    "DiaSemanaReduzido": "Sat",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-01T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-01T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-01T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-01T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-01T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-01T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-02T00:00:00",
+    "DiaSemana": "Sunday",
+    "DiaSemanaReduzido": "Sun",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-02T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-02T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-02T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-02T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-02T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-02T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-03T00:00:00",
+    "DiaSemana": "Monday",
+    "DiaSemanaReduzido": "Mon",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-03T08:43:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-03T17:20:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-03T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-03T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-03T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-03T00:00:00"
+      }
+    ],
+    "Total": 517.0,
+    "Extra": 0.0,
+    "Devendo": 23.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 23.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-04T00:00:00",
+    "DiaSemana": "Tuesday",
+    "DiaSemanaReduzido": "Tue",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-04T08:37:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-04T17:37:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-04T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-04T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-04T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-04T00:00:00"
+      }
+    ],
+    "Total": 540.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-05T00:00:00",
+    "DiaSemana": "Wednesday",
+    "DiaSemanaReduzido": "Wed",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-05T08:48:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-05T17:36:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-05T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-05T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-05T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-05T00:00:00"
+      }
+    ],
+    "Total": 528.0,
+    "Extra": 0.0,
+    "Devendo": 12.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 12.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-06T00:00:00",
+    "DiaSemana": "Thursday",
+    "DiaSemanaReduzido": "Thu",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-06T08:20:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-06T17:09:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-06T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-06T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-06T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-06T00:00:00"
+      }
+    ],
+    "Total": 529.0,
+    "Extra": 0.0,
+    "Devendo": 11.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 11.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-07T00:00:00",
+    "DiaSemana": "Friday",
+    "DiaSemanaReduzido": "Fri",
+    "EhFeriado": true,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-07T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-07T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-07T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-07T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-07T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-07T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-08T00:00:00",
+    "DiaSemana": "Saturday",
+    "DiaSemanaReduzido": "Sat",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-08T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-08T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-08T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-08T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-08T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-08T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-09T00:00:00",
+    "DiaSemana": "Sunday",
+    "DiaSemanaReduzido": "Sun",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-09T00:00:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-09T00:00:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-09T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-09T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-09T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-09T00:00:00"
+      }
+    ],
+    "Total": 0.0,
+    "Extra": 0.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-10T00:00:00",
+    "DiaSemana": "Monday",
+    "DiaSemanaReduzido": "Mon",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-10T08:25:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-10T17:36:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-10T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-10T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-10T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-10T00:00:00"
+      }
+    ],
+    "Total": 551.0,
+    "Extra": 11.0,
+    "Devendo": 0.0,
+    "ExtraAjustado": 11.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-11T00:00:00",
+    "DiaSemana": "Tuesday",
+    "DiaSemanaReduzido": "Tue",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-11T08:36:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-11T17:33:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-11T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-11T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-11T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-11T00:00:00"
+      }
+    ],
+    "Total": 537.0,
+    "Extra": 0.0,
+    "Devendo": 3.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 0.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-12T00:00:00",
+    "DiaSemana": "Wednesday",
+    "DiaSemanaReduzido": "Wed",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-12T08:42:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-12T17:26:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-12T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-12T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-12T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-12T00:00:00"
+      }
+    ],
+    "Total": 524.0,
+    "Extra": 0.0,
+    "Devendo": 16.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 16.0
+  },
+  {
+    "Matricula": "95537171520",
+    "Data": "2018-09-13T00:00:00",
+    "DiaSemana": "Thursday",
+    "DiaSemanaReduzido": "Thu",
+    "EhFeriado": false,
+    "Lancamentos": [
+      {
+        "Ordem": 0,
+        "Data": "2018-09-13T08:35:00"
+      },
+      {
+        "Ordem": 1,
+        "Data": "2018-09-13T17:13:00"
+      },
+      {
+        "Ordem": 2,
+        "Data": "2018-09-13T00:00:00"
+      },
+      {
+        "Ordem": 3,
+        "Data": "2018-09-13T00:00:00"
+      },
+      {
+        "Ordem": 4,
+        "Data": "2018-09-13T00:00:00"
+      },
+      {
+        "Ordem": 5,
+        "Data": "2018-09-13T00:00:00"
+      }
+    ],
+    "Total": 518.0,
+    "Extra": 0.0,
+    "Devendo": 22.0,
+    "ExtraAjustado": 0.0,
+    "DevendoAjustado": 22.0
+  }
+]

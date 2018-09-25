@@ -77,6 +77,10 @@ namespace CAPonto.Controllers
                 
                 return RedirectToAction(nameof(Index), "Consolidado");
             }
+            else
+            {
+                ViewBag.MensagemAlerta = "Acesso inválido!";
+            }
 
             return View();
         }

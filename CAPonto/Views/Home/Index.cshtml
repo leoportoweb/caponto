@@ -13,8 +13,11 @@
             <form asp-action="Index">
                 <input type="text" id="matricula" name="matricula" class="form-control" placeholder="Registration" /><br />
                 <button class="btn btn-primary" type="submit" style="width: 100%">Login</button>
-                <br /><br /><br />
+                <br /><br />
+                <partial name="_MensagensPartial" />
+                <br />
                 <img src="images/logo_cap.png" alt="Capgemini" style="max-width: 200px;" />
+                @Html.Raw(ViewBag.MensagemAlerta)
                 <br />
             </form>
         </center>

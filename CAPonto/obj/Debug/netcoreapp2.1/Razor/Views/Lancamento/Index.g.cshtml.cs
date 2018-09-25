@@ -74,7 +74,7 @@ using System.Security.AccessControl;
             WriteLiteral("\r\n<h2>Records</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(164, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5641662b26d84a4ea9d8add60711ec2d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "407aa9830cde4124a16237d348ad6a20", async() => {
                 BeginContext(187, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -96,7 +96,7 @@ using System.Security.AccessControl;
             WriteLiteral("\r\n</p>\r\n<br />\r\n<label class=\"text-smaller\">Select a period:</label>\r\n<br />\r\n");
             EndContext();
             BeginContext(279, 811, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d916bd2a7bc2485896735a5bddf9adaf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f760e06de1b47afaa5d48a18cb445fa", async() => {
                 BeginContext(304, 206, true);
                 WriteLiteral("\r\n    <div class=\"form-inline\">\r\n        <div class=\"form-group mb-2\">\r\n            <label>Month:</label>&nbsp;\r\n            <input id=\"mes\" name=\"mes\" type=\"number\" class=\"form-control\" placeholder=\"Month\"");
                 EndContext();
@@ -149,7 +149,7 @@ WriteAttributeValue("", 737, ViewBag.Ano, 737, 12, false);
             WriteLiteral("\r\n<script>\r\n    function ShowImport() {\r\n        if (!$(\"#divImport\").is(\':visible\')) {\r\n            $(\"#divImport\").slideDown(500);\r\n        } else {\r\n            $(\"#divImport\").slideUp(500);\r\n        }\r\n    }\r\n</script>\r\n");
             EndContext();
             BeginContext(1314, 523, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a409aac98b644d18c0287be1120da8f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5217fec83412438596622144e9ba09a6", async() => {
                 BeginContext(1370, 460, true);
                 WriteLiteral(@"
     <div id=""divImport"" class=""form-inline"" style=""display: none; padding-top: 20px;"">
@@ -184,7 +184,7 @@ WriteAttributeValue("", 737, ViewBag.Ano, 737, 12, false);
             WriteLiteral("\r\n<br />\r\n<br />\r\n");
             EndContext();
             BeginContext(1855, 9937, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b9906e6483a940d1b3bfa4076cdc5750", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eac2de0f187744e8a5b9d47d110afdb4", async() => {
                 BeginContext(1879, 271, true);
                 WriteLiteral(@"
     <table class=""table"">
